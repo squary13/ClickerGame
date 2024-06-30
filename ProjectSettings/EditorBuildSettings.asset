@@ -11,5 +11,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Achievments.unity
     guid: e5a04957ca6c95540a55001c15ab8b74
+  - enabled: 1
+    path: "Assets/Scenes/\u041F\u0440\u0430\u0432\u044B\u0439 \u0441\u043B\u0430\u0439\u0434.unity"
+    guid: cc2c9c427cef2944085cbb1243f998ae
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: c3d18dc4c7aa8b3498d756ca85c342e7, type: 2}

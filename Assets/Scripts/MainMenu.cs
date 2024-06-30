@@ -9,8 +9,10 @@ public class MainMenu : MonoBehaviour
     [SerializeField] int money;
     public int total_money;
     public Text moneyText;
+    public AudioSource audioSource;
 
     private void Start(){
+    audioSource = GetComponent<AudioSource>();
     money = PlayerPrefs.GetInt("money");
     total_money = PlayerPrefs.GetInt("total_money");
     }
@@ -20,11 +22,9 @@ public class MainMenu : MonoBehaviour
     total_money++;
     PlayerPrefs.SetInt("money", money);
     PlayerPrefs.SetInt("total_money", total_money);
+    audioSource.Play();
     }
 
-    public void ToAchievments(){
-    SceneManager.LoadScene(1);
-    }
 
     // Update is called once per frame
     void Update()
