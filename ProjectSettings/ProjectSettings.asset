@@ -804,10 +804,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: e8816f1a-ebd8-4cd1-9ef0-6ac05afeee61
+  cloudProjectId: fbcbe1c7-07f3-4fa7-b654-17fb2fcc332d
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: My project 2024-06-29_22-10-00
+  projectName: ClickerGame
   organizationId: squary50
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

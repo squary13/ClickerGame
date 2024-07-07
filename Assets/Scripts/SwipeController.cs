@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class SwipeController : MonoBehaviour, IEndDragHandler
 {
@@ -11,6 +12,8 @@ public class SwipeController : MonoBehaviour, IEndDragHandler
 
     [SerializeField] float tweenTime = 0.5f;
     [SerializeField] LeanTweenType tweenType = LeanTweenType.easeInOutQuad;
+    [SerializeField] Image[] barImage;
+    [SerializeField] Sprite barClosed, barOpen;
     float dragThreshold;
     private Vector3 targetPos;
 
@@ -19,6 +22,7 @@ public class SwipeController : MonoBehaviour, IEndDragHandler
         currentPage = 1;
         targetPos = levelPagesRect.localPosition;
         dragThreshold = Screen.width / 15;
+        UpdateBar();
     }
 
     public void Next()
@@ -45,6 +49,13 @@ public class SwipeController : MonoBehaviour, IEndDragHandler
     {
         LeanTween.cancel(levelPagesRect); // Отменяем любые текущие анимации для предотвращения конфликтов
         levelPagesRect.LeanMoveLocal(targetPos, tweenTime).setEase(tweenType);
+        UpdateBar();
+    }
+    void UpdateBar(){
+        foreach (var item in barImage){
+            item.sprite = barClosed;
+        }
+        barImage[currentPage - 1].sprite = barOpen;
     }
 
     public void OnEndDrag(PointerEventData eventData)

@@ -1,0 +1,4 @@
+repository "1@squary50@cloud"
+  path "/"
+    br "/main"
+    co "/main"
