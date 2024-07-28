@@ -132,3 +132,4 @@ public class LoadingManager : MonoBehaviour
         Debug.Log("Finished FadeOutTransition");
     }
 }
+// sosu
