@@ -96,3 +96,4 @@ public class LoadingManager : MonoBehaviour
         Debug.Log("Main scene loaded successfully.");
     }
 }
+// sosu
